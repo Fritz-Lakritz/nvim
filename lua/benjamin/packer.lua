@@ -5,6 +5,8 @@ vim.cmd [[packadd packer.nvim]]
 
 return require('packer').startup(function(use)
   -- Packer can manage itself
+  -- nvim
+  use 'lervag/vimtex'
   use 'wbthomason/packer.nvim'
   use 'ThePrimeagen/vim-be-good'
 
