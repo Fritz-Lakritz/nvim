@@ -1,4 +1,3 @@
-
 function ColorMyPencils(color)
 	vim.cmd.colorscheme 'nordic'
 
