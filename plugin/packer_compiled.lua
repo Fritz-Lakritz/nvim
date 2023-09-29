@@ -79,6 +79,16 @@ _G.packer_plugins = {
     path = "/Users/Benjamin-Koerfer/.local/share/nvim/site/pack/packer/start/LuaSnip",
     url = "https://github.com/L3MON4D3/LuaSnip"
   },
+  aurora = {
+    loaded = true,
+    path = "/Users/Benjamin-Koerfer/.local/share/nvim/site/pack/packer/start/aurora",
+    url = "https://github.com/ray-x/aurora"
+  },
+  catppuccin = {
+    loaded = true,
+    path = "/Users/Benjamin-Koerfer/.local/share/nvim/site/pack/packer/start/catppuccin",
+    url = "https://github.com/catppuccin/nvim"
+  },
   ["cmp-buffer"] = {
     loaded = true,
     path = "/Users/Benjamin-Koerfer/.local/share/nvim/site/pack/packer/start/cmp-buffer",
@@ -104,15 +114,25 @@ _G.packer_plugins = {
     path = "/Users/Benjamin-Koerfer/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
     url = "https://github.com/saadparwaiz1/cmp_luasnip"
   },
-  ["darcula-solid.nvim"] = {
+  ["darcula-solid"] = {
     loaded = true,
-    path = "/Users/Benjamin-Koerfer/.local/share/nvim/site/pack/packer/start/darcula-solid.nvim",
+    path = "/Users/Benjamin-Koerfer/.local/share/nvim/site/pack/packer/start/darcula-solid",
     url = "https://github.com/briones-gabriel/darcula-solid.nvim"
+  },
+  ["doom-one"] = {
+    loaded = true,
+    path = "/Users/Benjamin-Koerfer/.local/share/nvim/site/pack/packer/start/doom-one",
+    url = "https://github.com/NTBBloodbath/doom-one.nvim"
   },
   ["friendly-snippets"] = {
     loaded = true,
     path = "/Users/Benjamin-Koerfer/.local/share/nvim/site/pack/packer/start/friendly-snippets",
     url = "https://github.com/rafamadriz/friendly-snippets"
+  },
+  gruvbox = {
+    loaded = true,
+    path = "/Users/Benjamin-Koerfer/.local/share/nvim/site/pack/packer/start/gruvbox",
+    url = "https://github.com/ellisonleao/gruvbox.nvim"
   },
   harpoon = {
     loaded = true,
@@ -145,9 +165,19 @@ _G.packer_plugins = {
     path = "/Users/Benjamin-Koerfer/.local/share/nvim/site/pack/packer/start/mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
   },
-  ["nordic.nvim"] = {
+  mellifluous = {
     loaded = true,
-    path = "/Users/Benjamin-Koerfer/.local/share/nvim/site/pack/packer/start/nordic.nvim",
+    path = "/Users/Benjamin-Koerfer/.local/share/nvim/site/pack/packer/start/mellifluous",
+    url = "https://github.com/ramojus/mellifluous.nvim"
+  },
+  neon = {
+    loaded = true,
+    path = "/Users/Benjamin-Koerfer/.local/share/nvim/site/pack/packer/start/neon",
+    url = "https://github.com/rafamadriz/neon"
+  },
+  nordic = {
+    loaded = true,
+    path = "/Users/Benjamin-Koerfer/.local/share/nvim/site/pack/packer/start/nordic",
     url = "https://github.com/AlexvZyl/nordic.nvim"
   },
   ["nvim-cmp"] = {
@@ -164,6 +194,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/Benjamin-Koerfer/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
     url = "https://github.com/nvim-treesitter/nvim-treesitter"
+  },
+  onenord = {
+    loaded = true,
+    path = "/Users/Benjamin-Koerfer/.local/share/nvim/site/pack/packer/start/onenord",
+    url = "https://github.com/rmehri01/onenord.nvim"
   },
   ["packer.nvim"] = {
     loaded = true,
@@ -191,6 +226,11 @@ _G.packer_plugins = {
     path = "/Users/Benjamin-Koerfer/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
   },
+  tokyonight = {
+    loaded = true,
+    path = "/Users/Benjamin-Koerfer/.local/share/nvim/site/pack/packer/start/tokyonight",
+    url = "https://github.com/folke/tokyonight.nvim"
+  },
   undotree = {
     loaded = true,
     path = "/Users/Benjamin-Koerfer/.local/share/nvim/site/pack/packer/start/undotree",
@@ -215,18 +255,23 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/Benjamin-Koerfer/.local/share/nvim/site/pack/packer/start/vimtex",
     url = "https://github.com/lervag/vimtex"
+  },
+  ["zen-mode.nvim"] = {
+    loaded = true,
+    path = "/Users/Benjamin-Koerfer/.local/share/nvim/site/pack/packer/start/zen-mode.nvim",
+    url = "https://github.com/folke/zen-mode.nvim"
   }
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: rose-pine
-time([[Config for rose-pine]], true)
-try_loadstring("\27LJ\2\n9\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0\26colorscheme rose-pine\bcmd\bvim\0", "config", "rose-pine")
-time([[Config for rose-pine]], false)
 -- Config for: kanagawa
 time([[Config for kanagawa]], true)
 try_loadstring("\27LJ\2\n8\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0\25colorscheme kanagawa\bcmd\bvim\0", "config", "kanagawa")
 time([[Config for kanagawa]], false)
+-- Config for: rose-pine
+time([[Config for rose-pine]], true)
+try_loadstring("\27LJ\2\n9\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0\26colorscheme rose-pine\bcmd\bvim\0", "config", "rose-pine")
+time([[Config for rose-pine]], false)
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then

@@ -12,6 +12,8 @@ return require('packer').startup(function(use)
     use 'wbthomason/packer.nvim'
     use 'ThePrimeagen/vim-be-good'
 
+    use("folke/zen-mode.nvim")
+ 
     -- use {'neoclide/coc.nvim', branch = 'release'}
 
     use {
@@ -36,9 +38,17 @@ return require('packer').startup(function(use)
         end
     })
 
-    use { "briones-gabriel/darcula-solid.nvim", requires = "rktjmp/lush.nvim" }
+    use { "briones-gabriel/darcula-solid.nvim", requires = "rktjmp/lush.nvim", as = "darcula-solid"}
 
-    use 'AlexvZyl/nordic.nvim'
+    use {'AlexvZyl/nordic.nvim', as = "nordic"}
+    use { "catppuccin/nvim", as = "catppuccin" }
+    use { "ray-x/aurora", as = "aurora" }
+    use { "ellisonleao/gruvbox.nvim", as = "gruvbox" }
+    use {'rmehri01/onenord.nvim', as = "onenord"}
+    use {'NTBBloodbath/doom-one.nvim', as = "doom-one"}
+    use {'ramojus/mellifluous.nvim', as = "mellifluous"}
+    use {"rafamadriz/neon", as = "neon"}
+    use {"folke/tokyonight.nvim", as = "tokyonight"}
 
     use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
     use('nvim-treesitter/playground')
