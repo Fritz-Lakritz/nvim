@@ -49,8 +49,8 @@ local function save_profiles(threshold)
 end
 
 time([[Luarocks path setup]], true)
-local package_path_str = "/Users/Benjamin-Koerfer/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?.lua;/Users/Benjamin-Koerfer/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?/init.lua;/Users/Benjamin-Koerfer/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?.lua;/Users/Benjamin-Koerfer/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?/init.lua"
-local install_cpath_pattern = "/Users/Benjamin-Koerfer/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/lua/5.1/?.so"
+local package_path_str = "/Users/Benjamin-Koerfer/.cache/nvim/packer_hererocks/2.1.1696795921/share/lua/5.1/?.lua;/Users/Benjamin-Koerfer/.cache/nvim/packer_hererocks/2.1.1696795921/share/lua/5.1/?/init.lua;/Users/Benjamin-Koerfer/.cache/nvim/packer_hererocks/2.1.1696795921/lib/luarocks/rocks-5.1/?.lua;/Users/Benjamin-Koerfer/.cache/nvim/packer_hererocks/2.1.1696795921/lib/luarocks/rocks-5.1/?/init.lua"
+local install_cpath_pattern = "/Users/Benjamin-Koerfer/.cache/nvim/packer_hererocks/2.1.1696795921/lib/lua/5.1/?.so"
 if not string.find(package.path, package_path_str, 1, true) then
   package.path = package.path .. ';' .. package_path_str
 end
@@ -118,6 +118,14 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/Benjamin-Koerfer/.local/share/nvim/site/pack/packer/start/darcula-solid",
     url = "https://github.com/briones-gabriel/darcula-solid.nvim"
+  },
+  ["dashboard-nvim"] = {
+    config = { "\27LJ\2\n…\2\0\0\6\0\t\0\0156\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\a\0005\3\4\0004\4\3\0005\5\3\0>\5\1\4=\4\5\0034\4\0\0=\4\6\3=\3\b\2B\0\2\1K\0\1\0\vconfig\1\0\0\vfooter\vcenter\1\0\0\1\0\b\15key_format\n [%s]\ficon_hl\ngroup\ticon\5\vaction\5\tdesc\16description\bkey3shortcut key in dashboard buffer not keymap !!\vkey_hl\ngroup\fdesc_hl\ngroup\nsetup\14dashboard\frequire\0" },
+    loaded = false,
+    needs_bufread = false,
+    only_cond = false,
+    path = "/Users/Benjamin-Koerfer/.local/share/nvim/site/pack/packer/opt/dashboard-nvim",
+    url = "https://github.com/nvimdev/dashboard-nvim"
   },
   ["doom-one"] = {
     loaded = true,
@@ -195,6 +203,11 @@ _G.packer_plugins = {
     path = "/Users/Benjamin-Koerfer/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
     url = "https://github.com/nvim-treesitter/nvim-treesitter"
   },
+  ["nvim-web-devicons"] = {
+    loaded = true,
+    path = "/Users/Benjamin-Koerfer/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
+    url = "https://github.com/nvim-tree/nvim-web-devicons"
+  },
   onenord = {
     loaded = true,
     path = "/Users/Benjamin-Koerfer/.local/share/nvim/site/pack/packer/start/onenord",
@@ -256,6 +269,11 @@ _G.packer_plugins = {
     path = "/Users/Benjamin-Koerfer/.local/share/nvim/site/pack/packer/start/vimtex",
     url = "https://github.com/lervag/vimtex"
   },
+  vimwiki = {
+    loaded = true,
+    path = "/Users/Benjamin-Koerfer/.local/share/nvim/site/pack/packer/start/vimwiki",
+    url = "https://github.com/vimwiki/vimwiki"
+  },
   ["zen-mode.nvim"] = {
     loaded = true,
     path = "/Users/Benjamin-Koerfer/.local/share/nvim/site/pack/packer/start/zen-mode.nvim",
@@ -264,14 +282,21 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: kanagawa
-time([[Config for kanagawa]], true)
-try_loadstring("\27LJ\2\n8\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0\25colorscheme kanagawa\bcmd\bvim\0", "config", "kanagawa")
-time([[Config for kanagawa]], false)
 -- Config for: rose-pine
 time([[Config for rose-pine]], true)
 try_loadstring("\27LJ\2\n9\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0\26colorscheme rose-pine\bcmd\bvim\0", "config", "rose-pine")
 time([[Config for rose-pine]], false)
+-- Config for: kanagawa
+time([[Config for kanagawa]], true)
+try_loadstring("\27LJ\2\n8\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0\25colorscheme kanagawa\bcmd\bvim\0", "config", "kanagawa")
+time([[Config for kanagawa]], false)
+vim.cmd [[augroup packer_load_aucmds]]
+vim.cmd [[au!]]
+  -- Event lazy-loads
+time([[Defining lazy-load event autocommands]], true)
+vim.cmd [[au VimEnter * ++once lua require("packer.load")({'dashboard-nvim'}, { event = "VimEnter *" }, _G.packer_plugins)]]
+time([[Defining lazy-load event autocommands]], false)
+vim.cmd("augroup END")
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then

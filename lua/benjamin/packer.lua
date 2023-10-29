@@ -7,17 +7,18 @@ return require('packer').startup(function(use)
     -- Packer can manage itself
     -- nvim
     --
+    use 'vimwiki/vimwiki'
+
     use 'christoomey/vim-tmux-navigator'
     use 'lervag/vimtex'
     use 'wbthomason/packer.nvim'
     use 'ThePrimeagen/vim-be-good'
-
     use("folke/zen-mode.nvim")
- 
+
     -- use {'neoclide/coc.nvim', branch = 'release'}
 
     use {
-        'nvim-telescope/telescope.nvim', tag = '0.1.1',
+        'nvim-telescope/telescope.nvim', tag = '0.1.4',
         -- or                            , branch = '0.1.x',
         requires = { {'nvim-lua/plenary.nvim'} }
     }
@@ -78,12 +79,31 @@ return require('packer').startup(function(use)
             -- Snippets
             {'L3MON4D3/LuaSnip'},
             {'rafamadriz/friendly-snippets'},
-
-
         }
-
-
-
     }
-
+    use {
+        'nvimdev/dashboard-nvim',
+        event = 'VimEnter',
+        config = function()
+            require('dashboard').setup {
+                -- config
+                config = {
+                    center = {
+                        {
+                            icon = '',
+                            icon_hl = 'group',
+                            desc = 'description',
+                            desc_hl = 'group',
+                            key = 'shortcut key in dashboard buffer not keymap !!',
+                            key_hl = 'group',
+                            key_format = ' [%s]', -- `%s` will be substituted with value of `key`
+                            action = '',
+                        },
+                    },
+                    footer = {},
+                }
+            }
+        end,
+        requires = {'nvim-tree/nvim-web-devicons'}
+    }
 end)
