@@ -1,3 +1,5 @@
 require("benjamin.remap")
 require("benjamin.set")
-print("hello")
+
+-- search vimwiki with telescope
+require('telescope').load_extension('vimwiki')

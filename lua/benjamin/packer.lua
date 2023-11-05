@@ -1,13 +1,44 @@
 -- This file can be loaded by calling `lua require('plugins')` from your init.vim
 
 -- Only required if you have packer configured as `opt`
+-- s
 vim.cmd [[packadd packer.nvim]]
 
+-- 
 return require('packer').startup(function(use)
     -- Packer can manage itself
-    -- nvim
-    --
+    -- nvim 
+    use {'nvim-treesitter/nvim-treesitter'}
+    --    use {'nvim-orgmode/orgmode', config = function()
+        --        require('orgmode').setup_ts_grammar()
+        --        require('orgmode').setup{}
+        --    end
+        --}
+    use {'github/copilot.vim'}
+        use {
+            "nvim-neorg/neorg",
+            config = function()
+                require('neorg').setup {
+                    run = ":Neorg sync-parsers", 
+                    load = {
+                        ["core.defaults"] = {}, -- Loads default behaviour
+                        ["core.concealer"] = {}, -- Adds pretty icons to your documents
+                        ["core.dirman"] = { -- Manages Neorg workspaces
+                        config = {
+                            workspaces = {
+                                notes = "~/neorg",
+                            },
+                        },
+                    },
+                },
+            }
+        end,
+        run = ":Neorg sync-parsers",
+        requires = "nvim-lua/plenary.nvim",
+    }
+    use 'akinsho/org-bullets.nvim'
     use 'vimwiki/vimwiki'
+    use 'ElPiloto/telescope-vimwiki.nvim'
 
     use 'christoomey/vim-tmux-navigator'
     use 'lervag/vimtex'

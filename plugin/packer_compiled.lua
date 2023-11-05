@@ -49,8 +49,8 @@ local function save_profiles(threshold)
 end
 
 time([[Luarocks path setup]], true)
-local package_path_str = "/Users/Benjamin-Koerfer/.cache/nvim/packer_hererocks/2.1.1696795921/share/lua/5.1/?.lua;/Users/Benjamin-Koerfer/.cache/nvim/packer_hererocks/2.1.1696795921/share/lua/5.1/?/init.lua;/Users/Benjamin-Koerfer/.cache/nvim/packer_hererocks/2.1.1696795921/lib/luarocks/rocks-5.1/?.lua;/Users/Benjamin-Koerfer/.cache/nvim/packer_hererocks/2.1.1696795921/lib/luarocks/rocks-5.1/?/init.lua"
-local install_cpath_pattern = "/Users/Benjamin-Koerfer/.cache/nvim/packer_hererocks/2.1.1696795921/lib/lua/5.1/?.so"
+local package_path_str = "/Users/Benjamin-Koerfer/.cache/nvim/packer_hererocks/2.1.1697887905/share/lua/5.1/?.lua;/Users/Benjamin-Koerfer/.cache/nvim/packer_hererocks/2.1.1697887905/share/lua/5.1/?/init.lua;/Users/Benjamin-Koerfer/.cache/nvim/packer_hererocks/2.1.1697887905/lib/luarocks/rocks-5.1/?.lua;/Users/Benjamin-Koerfer/.cache/nvim/packer_hererocks/2.1.1697887905/lib/luarocks/rocks-5.1/?/init.lua"
+local install_cpath_pattern = "/Users/Benjamin-Koerfer/.cache/nvim/packer_hererocks/2.1.1697887905/lib/lua/5.1/?.so"
 if not string.find(package.path, package_path_str, 1, true) then
   package.path = package.path .. ';' .. package_path_str
 end
@@ -114,13 +114,18 @@ _G.packer_plugins = {
     path = "/Users/Benjamin-Koerfer/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
     url = "https://github.com/saadparwaiz1/cmp_luasnip"
   },
+  ["copilot.vim"] = {
+    loaded = true,
+    path = "/Users/Benjamin-Koerfer/.local/share/nvim/site/pack/packer/start/copilot.vim",
+    url = "https://github.com/github/copilot.vim"
+  },
   ["darcula-solid"] = {
     loaded = true,
     path = "/Users/Benjamin-Koerfer/.local/share/nvim/site/pack/packer/start/darcula-solid",
     url = "https://github.com/briones-gabriel/darcula-solid.nvim"
   },
   ["dashboard-nvim"] = {
-    config = { "\27LJ\2\nÖ\2\0\0\6\0\t\0\0156\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\a\0005\3\4\0004\4\3\0005\5\3\0>\5\1\4=\4\5\0034\4\0\0=\4\6\3=\3\b\2B\0\2\1K\0\1\0\vconfig\1\0\0\vfooter\vcenter\1\0\0\1\0\b\15key_format\n [%s]\ficon_hl\ngroup\ticon\5\vaction\5\tdesc\16description\bkey3shortcut key in dashboard buffer not keymap !!\vkey_hl\ngroup\fdesc_hl\ngroup\nsetup\14dashboard\frequire\0" },
+    config = { "\27LJ\2\nÖ\2\0\0\6\0\t\0\0156\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\a\0005\3\4\0004\4\3\0005\5\3\0>\5\1\4=\4\5\0034\4\0\0=\4\6\3=\3\b\2B\0\2\1K\0\1\0\vconfig\1\0\0\vfooter\vcenter\1\0\0\1\0\b\ticon\5\15key_format\n [%s]\bkey3shortcut key in dashboard buffer not keymap !!\vaction\5\tdesc\16description\vkey_hl\ngroup\fdesc_hl\ngroup\ficon_hl\ngroup\nsetup\14dashboard\frequire\0" },
     loaded = false,
     needs_bufread = false,
     only_cond = false,
@@ -183,6 +188,12 @@ _G.packer_plugins = {
     path = "/Users/Benjamin-Koerfer/.local/share/nvim/site/pack/packer/start/neon",
     url = "https://github.com/rafamadriz/neon"
   },
+  neorg = {
+    config = { "\27LJ\2\n‹\1\0\0\a\0\14\0\0196\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0004\4\0\0=\4\5\0034\4\0\0=\4\6\0035\4\n\0005\5\b\0005\6\a\0=\6\t\5=\5\v\4=\4\f\3=\3\r\2B\0\2\1K\0\1\0\tload\16core.dirman\vconfig\1\0\0\15workspaces\1\0\0\1\0\1\nnotes\f~/neorg\19core.concealer\18core.defaults\1\0\0\1\0\1\brun\24:Neorg sync-parsers\nsetup\nneorg\frequire\0" },
+    loaded = true,
+    path = "/Users/Benjamin-Koerfer/.local/share/nvim/site/pack/packer/start/neorg",
+    url = "https://github.com/nvim-neorg/neorg"
+  },
   nordic = {
     loaded = true,
     path = "/Users/Benjamin-Koerfer/.local/share/nvim/site/pack/packer/start/nordic",
@@ -213,6 +224,11 @@ _G.packer_plugins = {
     path = "/Users/Benjamin-Koerfer/.local/share/nvim/site/pack/packer/start/onenord",
     url = "https://github.com/rmehri01/onenord.nvim"
   },
+  ["org-bullets.nvim"] = {
+    loaded = true,
+    path = "/Users/Benjamin-Koerfer/.local/share/nvim/site/pack/packer/start/org-bullets.nvim",
+    url = "https://github.com/akinsho/org-bullets.nvim"
+  },
   ["packer.nvim"] = {
     loaded = true,
     path = "/Users/Benjamin-Koerfer/.local/share/nvim/site/pack/packer/start/packer.nvim",
@@ -233,6 +249,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/Benjamin-Koerfer/.local/share/nvim/site/pack/packer/start/rose-pine",
     url = "https://github.com/rose-pine/neovim"
+  },
+  ["telescope-vimwiki.nvim"] = {
+    loaded = true,
+    path = "/Users/Benjamin-Koerfer/.local/share/nvim/site/pack/packer/start/telescope-vimwiki.nvim",
+    url = "https://github.com/ElPiloto/telescope-vimwiki.nvim"
   },
   ["telescope.nvim"] = {
     loaded = true,
@@ -282,6 +303,10 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
+-- Config for: neorg
+time([[Config for neorg]], true)
+try_loadstring("\27LJ\2\n‹\1\0\0\a\0\14\0\0196\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0004\4\0\0=\4\5\0034\4\0\0=\4\6\0035\4\n\0005\5\b\0005\6\a\0=\6\t\5=\5\v\4=\4\f\3=\3\r\2B\0\2\1K\0\1\0\tload\16core.dirman\vconfig\1\0\0\15workspaces\1\0\0\1\0\1\nnotes\f~/neorg\19core.concealer\18core.defaults\1\0\0\1\0\1\brun\24:Neorg sync-parsers\nsetup\nneorg\frequire\0", "config", "neorg")
+time([[Config for neorg]], false)
 -- Config for: rose-pine
 time([[Config for rose-pine]], true)
 try_loadstring("\27LJ\2\n9\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0\26colorscheme rose-pine\bcmd\bvim\0", "config", "rose-pine")
