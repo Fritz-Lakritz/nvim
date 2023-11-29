@@ -65,6 +65,25 @@ return require('packer').startup(function(use)
     use('theprimeagen/harpoon')
     use('mbbill/undotree')
     use('tpope/vim-fugitive')
+
+    -- completion
+    use ("williamboman/mason.nvim")
+    use ("williamboman/mason-lspconfig.nvim")
+    use ("neovim/nvim-lspconfig")
+    -- cmp
+    use('hrsh7th/nvim-cmp')
+    use('hrsh7th/cmp-buffer')
+    use('hrsh7th/cmp-nvim-lsp')
+    use('hrsh7th/cmp-path')
+    use('hrsh7th/cmp-nvim-lua')
+
+    -- LuaSnip
+    use({
+        "L3MON4D3/LuaSnip",
+        tag = "v2.*",
+        build = "make install_jsregexp"
+    })
+    use('saadparwaiz1/cmp_luasnip')
     
     
 end)
