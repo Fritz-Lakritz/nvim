@@ -8,12 +8,6 @@ local rep = require("luasnip.extras").rep
 
 -- parser is used for VS**** style snippets.
 ls.add_snippets("lua", {
-    s("hello", {
-        t("-- hello world"),
-        i(1),
-        t("joo"),
-    }),
-
     ls.parser.parse_snippet("expand", "-- this is what expand does"),
 
     ls.parser.parse_snippet("lf", "local $1 = funktion($2)\n\t$0\nend"),
@@ -28,6 +22,7 @@ ls.add_snippets("tex", {
     -- begin/end
     ls.parser.parse_snippet("align", "\\begin{align*}\n\t$0\n\\end{align*}"),
     ls.parser.parse_snippet("begin", "\\begin{$1}\n\t$0\n\\end{$1}"),
+
 
     -- text
     ls.parser.parse_snippet("section", "\\section{$1}\n\t$0"),
