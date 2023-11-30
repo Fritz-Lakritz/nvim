@@ -41,22 +41,17 @@ cmp.setup {
       behavior = cmp.ConfirmBehavior.Replace,
       select = true,
     },
-    ['<Tab>'] = cmp.mapping(function(fallback)
-      if cmp.visible() then
-        cmp.select_next_item()
+    ['<c-l>'] = cmp.mapping(function (fallback)
+      if luasnip.choice_active() then
+        luasnip.change_choice(1)
       else
         fallback()
       end
-    end, { 'i', 's' }),
-    ['<S-Tab>'] = cmp.mapping(function(fallback)
-      if cmp.visible() then
-        cmp.select_prev_item()
-      elseif luasnip.locally_jumpable(-1) then
-        luasnip.jump(-1)
-      else
-        fallback()
-      end
-    end, { 'i', 's' }),
+      end, { 'i', 's' }),
+
+    -- disable tab completion
+    ['<Tab>'] = cmp.config.disable,
+    ['<S-Tab>'] = cmp.config.disable,
   },
   sources = {
     { name = 'copilot' },
