@@ -16,7 +16,7 @@ require("lspconfig").lua_ls.setup {
         vim.keymap.set("n", "gi", vim.lsp.buf.implementation, {buffer = 0})
         vim.keymap.set("n", "<leader>r", vim.lsp.buf.rename, {buffer = 0})
     end
-}-- conect to lua language server
+}
 require("lspconfig").texlab.setup {
     on_attach = function ()
         vim.keymap.set("n", "K", vim.lsp.buf.hover, {buffer = 0})
@@ -26,7 +26,7 @@ require("lspconfig").texlab.setup {
         vim.keymap.set("n", "gi", vim.lsp.buf.implementation, {buffer = 0})
         vim.keymap.set("n", "<leader>r", vim.lsp.buf.rename, {buffer = 0})
     end
-}-- conect to tex language server
+}
 require("lspconfig").jdtls.setup {
     on_attach = function ()
         vim.keymap.set("n", "K", vim.lsp.buf.hover, {buffer = 0})
@@ -36,7 +36,7 @@ require("lspconfig").jdtls.setup {
         vim.keymap.set("n", "gi", vim.lsp.buf.implementation, {buffer = 0})
         vim.keymap.set("n", "<leader>r", vim.lsp.buf.rename, {buffer = 0})
     end,
-}-- conect to java language server
+}
 require("lspconfig").pylsp.setup {
     on_attach = function ()
         vim.keymap.set("n", "K", vim.lsp.buf.hover, {buffer = 0})
@@ -46,4 +46,4 @@ require("lspconfig").pylsp.setup {
         vim.keymap.set("n", "gi", vim.lsp.buf.implementation, {buffer = 0})
         vim.keymap.set("n", "<leader>r", vim.lsp.buf.rename, {buffer = 0})
     end,
-}-- conect to python language server
+}
