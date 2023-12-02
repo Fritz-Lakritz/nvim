@@ -9,11 +9,9 @@ return require('packer').startup(function(use)
     -- Packer can manage itself
     -- nvim 
     use {'nvim-treesitter/nvim-treesitter'}
-    use {'SirVer/ultisnips'}
         --
     use {'ArbitRandomUser/latexrenderer'}
     use {'github/copilot.vim'}
-    use 'akinsho/org-bullets.nvim'
     use 'vimwiki/vimwiki'
     use 'ElPiloto/telescope-vimwiki.nvim'
 
@@ -84,6 +82,5 @@ return require('packer').startup(function(use)
         build = "make install_jsregexp"
     })
     use('saadparwaiz1/cmp_luasnip')
-    
-    
+    use "sar/friendly-snippets.nvim"
 end)

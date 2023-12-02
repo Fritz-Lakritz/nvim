@@ -13,5 +13,7 @@ vim.keymap.set("n", "<c-u>", "<c-u>zz")
 vim.keymap.set("n", "<c-d>", "<c-d>zz")
 
 
-vim.keymap.set("n", "<leader>dn", vim.diagnostic.goto_next, {buffer = 0})
-vim.keymap.set("n", "<leader>dp", vim.diagnostic.goto_prev, {buffer = 0})
+-- LSP
+vim.keymap.set("n", "<leader>dn", "<cmd>lua vim.diagnostic.goto_next()<cr>")
+vim.keymap.set("n", "<leader>dp", "<cmd>lua vim.diagnostic.goto_prev()<cr>")
+vim.keymap.set("n", "<leader>ca", "<cmd>lua vim.lsp.buf.code_action()<cr>")

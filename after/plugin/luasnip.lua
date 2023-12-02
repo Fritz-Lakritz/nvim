@@ -34,7 +34,7 @@ ls.add_snippets("tex", {
     ls.parser.parse_snippet("lorem", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse"),
 
     -- begin/end
-    ls.parser.parse_snippet("align", "\\begin{align*}\n\t$0\n\\end{align*}"),
+    ls.parser.parse_snippet("ali*", "\\begin{align*}\n\t$0\n\\end{align*}"),
     ls.parser.parse_snippet("begin", "\\begin{$1}\n\t$0\n\\end{$1}"),
 
 
@@ -51,6 +51,9 @@ ls.add_snippets("tex", {
 
     -- input
     ls.parser.parse_snippet("template", "\\input{preamble}\n\\input{macros}\n\\input{letterfonts}"),
+
+    -- Kommentare
+    ls.parser.parse_snippet("Quelle", "\\begin{flushright}\n\t\\tiny{Quelle: $1}\n\\end{flushright}"),
 })
 ls.add_snippets("java", {
     ls.parser.parse_snippet("main", "public static void main(String[] args) {\n\t$0\n}"),
