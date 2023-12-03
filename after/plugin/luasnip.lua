@@ -76,4 +76,7 @@ ls.add_snippets("java", {
         i(5, ""),
         i(0, ""),
     })),
+    s("sout", fmt("System.out.println({});", {
+        i(1, "text"),
+    })),
 })
