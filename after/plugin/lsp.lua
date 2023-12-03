@@ -7,6 +7,15 @@ require("mason-lspconfig").setup({
    },
 })
 
+require("lspconfig").hls.setup({
+    on_attach = function ()
+        vim.keymap.set("n", "K", vim.lsp.buf.hover, {buffer = 0})
+        vim.keymap.set("n", "gd", vim.lsp.buf.definition, {buffer = 0})
+        vim.keymap.set("n", "gD", vim.lsp.buf.decleration, {buffer = 0})
+        vim.keymap.set("n", "gt", vim.lsp.buf.type_definition, {buffer = 0})
+        vim.keymap.set("n", "gi", vim.lsp.buf.implementation, {buffer = 0})
+    end,
+})
 require("lspconfig").lua_ls.setup {
     on_attach = function ()
         vim.keymap.set("n", "K", vim.lsp.buf.hover, {buffer = 0})
@@ -14,7 +23,6 @@ require("lspconfig").lua_ls.setup {
         vim.keymap.set("n", "gD", vim.lsp.buf.decleration, {buffer = 0})
         vim.keymap.set("n", "gt", vim.lsp.buf.type_definition, {buffer = 0})
         vim.keymap.set("n", "gi", vim.lsp.buf.implementation, {buffer = 0})
-        vim.keymap.set("n", "<leader>r", vim.lsp.buf.rename, {buffer = 0})
     end
 }
 require("lspconfig").texlab.setup {
@@ -24,7 +32,6 @@ require("lspconfig").texlab.setup {
         vim.keymap.set("n", "gD", vim.lsp.buf.decleration, {buffer = 0})
         vim.keymap.set("n", "gt", vim.lsp.buf.type_definition, {buffer = 0})
         vim.keymap.set("n", "gi", vim.lsp.buf.implementation, {buffer = 0})
-        vim.keymap.set("n", "<leader>r", vim.lsp.buf.rename, {buffer = 0})
     end
 }
 require("lspconfig").jdtls.setup {
@@ -34,7 +41,6 @@ require("lspconfig").jdtls.setup {
         vim.keymap.set("n", "gD", vim.lsp.buf.decleration, {buffer = 0})
         vim.keymap.set("n", "gt", vim.lsp.buf.type_definition, {buffer = 0})
         vim.keymap.set("n", "gi", vim.lsp.buf.implementation, {buffer = 0})
-        vim.keymap.set("n", "<leader>r", vim.lsp.buf.rename, {buffer = 0})
     end,
 }
 require("lspconfig").pylsp.setup {
@@ -44,6 +50,5 @@ require("lspconfig").pylsp.setup {
         vim.keymap.set("n", "gD", vim.lsp.buf.decleration, {buffer = 0})
         vim.keymap.set("n", "gt", vim.lsp.buf.type_definition, {buffer = 0})
         vim.keymap.set("n", "gi", vim.lsp.buf.implementation, {buffer = 0})
-        vim.keymap.set("n", "<leader>r", vim.lsp.buf.rename, {buffer = 0})
     end,
 }
