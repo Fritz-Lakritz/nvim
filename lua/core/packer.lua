@@ -8,7 +8,7 @@ vim.cmd [[packadd packer.nvim]]
 return require('packer').startup(function(use)
     -- Packer can manage itself
     -- nvim 
-        --
+    --
     use {'ArbitRandomUser/latexrenderer'}
     use {'github/copilot.vim'}
     use 'vimwiki/vimwiki'
@@ -18,8 +18,6 @@ return require('packer').startup(function(use)
     use 'lervag/vimtex'
     use 'wbthomason/packer.nvim'
     use 'ThePrimeagen/vim-be-good'
-
-    -- use {'neoclide/coc.nvim', branch = 'release'}
 
     use {
         'nvim-telescope/telescope.nvim', tag = '0.1.4',
@@ -73,6 +71,15 @@ return require('packer').startup(function(use)
     use('hrsh7th/cmp-nvim-lsp')
     use('hrsh7th/cmp-path')
     use('hrsh7th/cmp-nvim-lua')
+
+    -- flutter
+    use {
+        'akinsho/flutter-tools.nvim',
+        requires = {
+            'nvim-lua/plenary.nvim',
+            'stevearc/dressing.nvim', -- optional for vim.ui.select
+        },
+    }
 
     -- LuaSnip
     use({

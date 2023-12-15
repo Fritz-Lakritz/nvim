@@ -129,6 +129,21 @@ _G.packer_plugins = {
     path = "/Users/Benjamin-Koerfer/.local/share/nvim/site/pack/packer/start/doom-one",
     url = "https://github.com/NTBBloodbath/doom-one.nvim"
   },
+  ["dressing.nvim"] = {
+    loaded = true,
+    path = "/Users/Benjamin-Koerfer/.local/share/nvim/site/pack/packer/start/dressing.nvim",
+    url = "https://github.com/stevearc/dressing.nvim"
+  },
+  ["flutter-tools.nvim"] = {
+    loaded = true,
+    path = "/Users/Benjamin-Koerfer/.local/share/nvim/site/pack/packer/start/flutter-tools.nvim",
+    url = "https://github.com/akinsho/flutter-tools.nvim"
+  },
+  ["formatter.nvim"] = {
+    loaded = true,
+    path = "/Users/Benjamin-Koerfer/.local/share/nvim/site/pack/packer/start/formatter.nvim",
+    url = "https://github.com/mhartington/formatter.nvim"
+  },
   ["friendly-snippets.nvim"] = {
     loaded = true,
     path = "/Users/Benjamin-Koerfer/.local/share/nvim/site/pack/packer/start/friendly-snippets.nvim",
