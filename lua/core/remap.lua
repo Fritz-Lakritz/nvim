@@ -18,3 +18,7 @@ vim.keymap.set("n", "<leader>dn", "<cmd>lua vim.diagnostic.goto_next()<cr>")
 vim.keymap.set("n", "<leader>dp", "<cmd>lua vim.diagnostic.goto_prev()<cr>")
 vim.keymap.set("n", "<leader>ca", "<cmd>lua vim.lsp.buf.code_action()<cr>")
 vim.keymap.set("n", "<leader>r", "<cmd>lua vim.lsp.buf.rename()<cr>")
+
+-- resize
+vim.keymap.set("n", "ctrl-+", "<cmd>vertical resize +5<cr>")
+vim.keymap.set("n", "ctrl--", "<cmd>vertical resize -5<cr>")
