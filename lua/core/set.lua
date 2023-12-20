@@ -12,3 +12,5 @@ vim.opt.backup = false
 vim.opt.smartindent = true
 
 vim.opt.scrolloff = 8
+
+vim.opt.mouse = ''
