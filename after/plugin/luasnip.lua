@@ -14,7 +14,7 @@ ls.add_snippets("lua", {
 
     ls.parser.parse_snippet("lf", "local $1 = funktion($2)\n\t$0\nend,"),
 
-    s("req", fmt("local {} = require('{}')", { i(1, "default"), rep(1)})),
+    s("req", fmt("local {} = require('{}')", { i(1, "default"), rep(1) })),
 
     s("choice", c(1, {
         t("one"),
@@ -31,7 +31,8 @@ ls.add_snippets("all", {
 
 -- latex snippets
 ls.add_snippets("tex", {
-    ls.parser.parse_snippet("lorem", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse"),
+    ls.parser.parse_snippet("lorem",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse"),
 
     -- begin/end
     ls.parser.parse_snippet("ali*", "\\begin{align*}\n\t$0\n\\end{align*}"),
@@ -61,7 +62,7 @@ ls.add_snippets("java", {
         i(1, "name"),
         i(0, ""),
     })),
-    s("method", fmt("{}{}{} {}({}){{\n\t{}\n}}", {-- spancing is important
+    s("method", fmt("{}{}{} {}({}){{\n\t{}\n}}", { -- spancing is important
         c(1, {
             t("public "),
             t("private "),
@@ -74,9 +75,26 @@ ls.add_snippets("java", {
         i(3, "void"),
         i(4, "name"),
         i(5, ""),
-        i(0, ""),
+        i(6, ""),
     })),
     s("sout", fmt("System.out.println({});", {
         i(1, "text"),
+    })),
+    s("randarr", fmt("for (int i = 0; i < {}; i++) {{\n\t{}[i] = (int) (Math.random() * {});\n}}", {
+        i(1, "length"),
+        i(2, "array"),
+        i(3, "max"),
+    })),
+    s("newrandarr",
+        fmt("int[] {} = new int[{}];\nfor (int i = 0; i < {}; i++) {{\n\t{}[i] = (int) (Math.random() * {});\n}}", {
+            i(1, "name"),
+            i(2, "length"),
+            rep(2, "length"),
+            rep(1, "name"),
+            i(3, "max"),
+        })),
+    s("rand", fmt("int {} = (int) (Math.random() * {});", {
+        i(1, "name"),
+        i(2, "max"),
     })),
 })
