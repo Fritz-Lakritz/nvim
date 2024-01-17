@@ -61,7 +61,11 @@ cmp.setup {
     { name = 'mason' },
     { name = 'friendly-snippets' },
     { name = 'path' },
-    { name = 'buffer' },
+    { name = 'buffer',           keyword_length = 3 },
+  },
+  experimental = {
+    native_menu = false,
+    ghost_text = false,
   },
 }
 -- The line beneath this is called `modeline`. See `:help modeline`

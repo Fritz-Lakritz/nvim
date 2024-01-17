@@ -4,13 +4,13 @@
 -- s
 vim.cmd [[packadd packer.nvim]]
 
--- 
+--
 return require('packer').startup(function(use)
     -- Packer can manage itself
-    -- nvim 
+    -- nvim
     --
-    use {'ArbitRandomUser/latexrenderer'}
-    use {'github/copilot.vim'}
+    use { 'ArbitRandomUser/latexrenderer' }
+    use { 'github/copilot.vim' }
     use 'vimwiki/vimwiki'
     use 'ElPiloto/telescope-vimwiki.nvim'
 
@@ -22,7 +22,7 @@ return require('packer').startup(function(use)
     use {
         'nvim-telescope/telescope.nvim', tag = '0.1.4',
         -- or                            , branch = '0.1.x',
-        requires = { {'nvim-lua/plenary.nvim'} }
+        requires = { { 'nvim-lua/plenary.nvim' } }
     }
 
     -- colorschemes
@@ -42,29 +42,29 @@ return require('packer').startup(function(use)
         end
     })
 
-    use { "briones-gabriel/darcula-solid.nvim", requires = "rktjmp/lush.nvim", as = "darcula-solid"}
+    use { "briones-gabriel/darcula-solid.nvim", requires = "rktjmp/lush.nvim", as = "darcula-solid" }
 
-    use {'AlexvZyl/nordic.nvim', as = "nordic"}
+    use { 'AlexvZyl/nordic.nvim', as = "nordic" }
     use { "catppuccin/nvim", as = "catppuccin" }
     use { "ray-x/aurora", as = "aurora" }
     use { "ellisonleao/gruvbox.nvim", as = "gruvbox" }
-    use {'rmehri01/onenord.nvim', as = "onenord"}
-    use {'NTBBloodbath/doom-one.nvim', as = "doom-one"}
-    use {'ramojus/mellifluous.nvim', as = "mellifluous"}
-    use {"rafamadriz/neon", as = "neon"}
-    use {"folke/tokyonight.nvim", as = "tokyonight"}
+    use { 'rmehri01/onenord.nvim', as = "onenord" }
+    use { 'NTBBloodbath/doom-one.nvim', as = "doom-one" }
+    use { 'ramojus/mellifluous.nvim', as = "mellifluous" }
+    use { "rafamadriz/neon", as = "neon" }
+    use { "folke/tokyonight.nvim", as = "tokyonight" }
     --colorschemes end
 
-    use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
+    use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
     use('nvim-treesitter/playground')
     use('theprimeagen/harpoon')
     use('mbbill/undotree')
     use('tpope/vim-fugitive')
 
     -- completion
-    use ("williamboman/mason.nvim")
-    use ("williamboman/mason-lspconfig.nvim")
-    use ("neovim/nvim-lspconfig")
+    use("williamboman/mason.nvim")
+    use("williamboman/mason-lspconfig.nvim")
+    use("neovim/nvim-lspconfig")
     -- cmp
     use('hrsh7th/nvim-cmp')
     use('hrsh7th/cmp-buffer')
@@ -89,4 +89,12 @@ return require('packer').startup(function(use)
     })
     use('saadparwaiz1/cmp_luasnip')
     use "sar/friendly-snippets.nvim"
+
+    -- comment
+    use {
+        'numToStr/Comment.nvim',
+        config = function()
+            require('Comment').setup()
+        end
+    }
 end)
