@@ -11,6 +11,11 @@ local extras = require("luasnip.extras")
 local fmt = require("luasnip.extras.fmt").fmt
 local rep = require("luasnip.extras").rep
 
+--------------------------------------------------------
+-- AUTOSNIPPETS
+--------------------------------------------------------
+
+
 -- parser is used for VS**** style snippets.
 ls.add_snippets("lua", {
     ls.parser.parse_snippet("expand", "-- this is what expand does"),
@@ -24,6 +29,14 @@ ls.add_snippets("lua", {
         t("two"),
         t("three"),
     })),
+    s( -- Insert over-line command
+        { trig = "ov", snippetType = "autosnippet" },
+        fmt(
+            [[\overline{<>}]],
+            { i(1) },
+            { delimiters = "<>" }
+        )
+    ),
 })
 ls.add_snippets("all", {
     s("date", f(function(_, _)
@@ -32,8 +45,28 @@ ls.add_snippets("all", {
 })
 
 
+
 -- latex snippets
 ls.add_snippets("tex", {
+    -- autosnippet
+
+
+    s({ trig = "$$", snippetType = "autosnippet" },
+        fmt(
+            [[$<>$]],
+            { i(1) },
+            { delimiters = "<>" }
+        )),
+
+    s({ trig = ";z", snippetType = "autosnippet" },
+        fmt(
+            [[\mathbb{Z}<>]],
+            { i(1) },
+            { delimiters = "<>" }
+        )),
+
+
+
     ls.parser.parse_snippet("lorem",
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse"),
 
