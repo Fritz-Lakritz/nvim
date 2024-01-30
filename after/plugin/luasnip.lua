@@ -29,14 +29,6 @@ ls.add_snippets("lua", {
         t("two"),
         t("three"),
     })),
-    s( -- Insert over-line command
-        { trig = "ov", snippetType = "autosnippet" },
-        fmt(
-            [[\overline{<>}]],
-            { i(1) },
-            { delimiters = "<>" }
-        )
-    ),
 })
 ls.add_snippets("all", {
     s("date", f(function(_, _)
@@ -64,7 +56,6 @@ ls.add_snippets("tex", {
             { i(1) },
             { delimiters = "<>" }
         )),
-
 
 
     ls.parser.parse_snippet("lorem",
