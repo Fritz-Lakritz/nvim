@@ -56,6 +56,7 @@ cmp.setup {
   sources = {
     { name = 'copilot' },
     { name = 'luasnip' },
+    { name = 'ultisnips' },
     { name = 'nvim_lua' },
     { name = 'nvim_lsp' },
     { name = 'mason' },

@@ -22,3 +22,8 @@ vim.keymap.set("n", "<leader>r", "<cmd>lua vim.lsp.buf.rename()<cr>")
 -- resize
 vim.keymap.set("n", "+", "<cmd>vertical resize +5<cr>")
 vim.keymap.set("n", "-", "<cmd>vertical resize -5<cr>")
+
+
+-- open inkscape
+vim.api.nvim_set_keymap('n', '<leader>is', [[:lua require'core.inkscape'.open_with_filename()<CR>]],
+    { noremap = true, silent = true })

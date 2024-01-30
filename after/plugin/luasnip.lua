@@ -4,6 +4,9 @@ local t = ls.text_node
 local i = ls.insert_node
 local f = ls.function_node
 local c = ls.choice_node
+local p = ls.parser
+local ii = ls.insert
+local tt = ls.text
 local extras = require("luasnip.extras")
 local fmt = require("luasnip.extras.fmt").fmt
 local rep = require("luasnip.extras").rep
@@ -55,7 +58,14 @@ ls.add_snippets("tex", {
 
     -- Kommentare
     ls.parser.parse_snippet("Quelle", "\\begin{flushright}\n\t\\tiny{Quelle: $1}\n\\end{flushright}"),
+    -- mk = mathmode dm = displaymath
+    s("mk", fmt("${}$", { i(1, "math") })),
+    s("dm", fmt("\\[\n{}\n\\]", { i(1, "math") })),
+
 })
+--------------------------------------------------------
+-- JAVA
+--------------------------------------------------------
 ls.add_snippets("java", {
     ls.parser.parse_snippet("main", "public static void main(String[] args) {\n\t$0\n}"),
     s("class", fmt("public class {} {{\n\t{}\n}}", {

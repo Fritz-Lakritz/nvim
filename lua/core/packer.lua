@@ -33,6 +33,7 @@ return require('packer').startup(function(use)
             vim.cmd('colorscheme rose-pine')
         end
     })
+    use { "catppuccin/nvim", as = "catppuccin" }
 
     use({
         "rebelot/kanagawa.nvim",
@@ -89,6 +90,9 @@ return require('packer').startup(function(use)
     })
     use('saadparwaiz1/cmp_luasnip')
     use "sar/friendly-snippets.nvim"
+
+    -- UltiSnips
+    use("SirVer/ultisnips")
 
     -- comment
     use {
