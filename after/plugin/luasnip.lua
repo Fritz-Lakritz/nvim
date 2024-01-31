@@ -10,11 +10,13 @@ local tt = ls.text
 local extras = require("luasnip.extras")
 local fmt = require("luasnip.extras.fmt").fmt
 local rep = require("luasnip.extras").rep
+local sn = require("luasnip.util.functions").sn
 
 --------------------------------------------------------
 -- AUTOSNIPPETS
 --------------------------------------------------------
-
+local sub = function(args, snip)
+end
 
 -- parser is used for VS**** style snippets.
 ls.add_snippets("lua", {
@@ -43,27 +45,38 @@ ls.add_snippets("tex", {
     -- autosnippet
 
 
-    s({ trig = "$$", snippetType = "autosnippet" },
+    -- mathmode
+    s({ trig = "$$", snippetType = "autosnippet", dscr = "inline math" },
         fmt(
             [[$<>$]],
             { i(1) },
             { delimiters = "<>" }
         )),
 
-    s({ trig = ";z", snippetType = "autosnippet" },
+    s({ trig = "\\[", snippetType = "autosnippet", dscr = "display math" },
         fmt(
-            [[\mathbb{Z}<>]],
-            { i(1) },
+            [[
+            <>
+                <>
+            <>]],
+            { t("\\["), i(1), t("\\]") },
             { delimiters = "<>" }
         )),
+    s({ trig = "//", snippetType = "autosnippet" }, fmt(
+        [[\frac{<>}{<>}]],
+        { i(1), i(2) },
+        { delimiters = "<>" }
+    )),
+
+
 
 
     ls.parser.parse_snippet("lorem",
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse"),
 
     -- begin/end
-    ls.parser.parse_snippet("ali*", "\\begin{align*}\n\t$0\n\\end{align*}"),
-    ls.parser.parse_snippet("begin", "\\begin{$1}\n\t$0\n\\end{$1}"),
+    ls.parser.parse_snippet("ali*", "\\begin{align*}\n\t$1\n\\end{align*}"),
+    ls.parser.parse_snippet("begin", "\\begin{$1}\n\t$2\n\\end{$1}"),
 
 
     -- text
@@ -82,9 +95,6 @@ ls.add_snippets("tex", {
 
     -- Kommentare
     ls.parser.parse_snippet("Quelle", "\\begin{flushright}\n\t\\tiny{Quelle: $1}\n\\end{flushright}"),
-    -- mk = mathmode dm = displaymath
-    s("mk", fmt("${}$", { i(1, "math") })),
-    s("dm", fmt("\\[\n{}\n\\]", { i(1, "math") })),
 
 })
 --------------------------------------------------------
