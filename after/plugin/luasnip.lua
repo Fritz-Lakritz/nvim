@@ -55,14 +55,9 @@ ls.add_snippets("tex", {
             { t("\\["), i(1), t("\\]") },
             { delimiters = "<>" }
         )),
-
     s({ trig = "//", snippetType = "autosnippet", dscr = "fraction" },
-        fmt(
-            [[
-            \frac{<>}{<>}]],
-            { i(1), i(2) },
-            { delimiters = "<>" }
-        )),
+        fmt([[\frac{<>}{<>}]], { i(1), i(2) }, { delimiters = "<>" })),
+
 
 
 
