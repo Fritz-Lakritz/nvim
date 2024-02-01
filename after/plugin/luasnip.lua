@@ -46,14 +46,7 @@ ls.add_snippets("tex", {
 
 
     -- mathmode
-    s({ trig = "$$", snippetType = "autosnippet", dscr = "inline math" },
-        fmt(
-            [[$<>$]],
-            { i(1) },
-            { delimiters = "<>" }
-        )),
-
-    s({ trig = "\\[", snippetType = "autosnippet", dscr = "display math" },
+    s({ trig = "dm", snippetType = "autosnippet", dscr = "display math" },
         fmt(
             [[
             <>
