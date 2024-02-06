@@ -15,6 +15,6 @@ vim.opt.scrolloff = 8
 
 vim.opt.mouse = ''
 
-vim.opt.spelllang = 'de'
+vim.opt.spelllang = { 'de', 'en' }
 
 vim.opt.spell = true

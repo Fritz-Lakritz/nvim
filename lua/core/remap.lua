@@ -24,9 +24,9 @@ vim.keymap.set("n", "+", "<cmd>vertical resize +5<cr>")
 vim.keymap.set("n", "-", "<cmd>vertical resize -5<cr>")
 
 
--- open inkscape
+-- open inkscape currently not working
 vim.api.nvim_set_keymap('n', '<leader>is', [[:lua require'core.inkscape'.open_with_filename()<CR>]],
     { noremap = true, silent = true })
 
--- Map <C-l> in insert mode
+-- auto correct
 vim.api.nvim_set_keymap('i', '<C-s>', '<C-g>u<Esc>[s1z=`]a<C-g>u', { noremap = true, silent = true })
