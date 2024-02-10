@@ -38,6 +38,10 @@ snippet fr "frame" i
 \\end{frame}
 endsnippet
 
+snippet - "item" i
+\\item 
+endsnippet
+
 snippet '((\d+)|(\d*)(\\)?([A-Za-z]+)((\^|_)(\{\d+\}|\d))*)/' "Fraction" wrA
 \\frac{`!p snip.rv = match.group(1)`}{$1}$0
 endsnippet
