@@ -12,6 +12,7 @@ vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = tr
 vim.keymap.set("n", "<c-u>", "<c-u>zz")
 vim.keymap.set("n", "<c-d>", "<c-d>zz")
 
+vim.keymap.set("x", "<leader>p", [["_dP]])
 
 -- LSP
 vim.keymap.set("n", "<leader>dn", "<cmd>lua vim.diagnostic.goto_next()<cr>")
@@ -30,3 +31,5 @@ vim.api.nvim_set_keymap('n', '<leader>is', [[:lua require'core.inkscape'.open_wi
 
 -- auto correct
 vim.api.nvim_set_keymap('i', '<C-s>', '<C-g>u<Esc>[s1z=`]a<C-g>u', { noremap = true, silent = true })
+
+vim.api.nvim_set_keymap('n', '<leader>f', '<cmd>! ~/work/scripts/tmuxsessionizer.zsh<CR>', { noremap = true })

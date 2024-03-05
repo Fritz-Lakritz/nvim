@@ -18,3 +18,7 @@ vim.opt.mouse = ''
 vim.opt.spelllang = { 'de', 'en' }
 
 vim.opt.spell = true
+
+vim.o.autoindent = true -- Enable auto-indentation
+vim.o.expandtab = true  -- Use spaces instead of tabs
+vim.o.shiftwidth = 4    -- Set the number of spaces inserted for each indentation level

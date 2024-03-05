@@ -12,7 +12,10 @@ return require('packer').startup(function(use)
     use { 'ArbitRandomUser/latexrenderer' }
     use { 'github/copilot.vim' }
     use 'vimwiki/vimwiki'
+
+    -- Telescope
     use 'ElPiloto/telescope-vimwiki.nvim'
+    use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
 
     use 'christoomey/vim-tmux-navigator'
     use 'lervag/vimtex'
@@ -26,7 +29,7 @@ return require('packer').startup(function(use)
         requires = { { 'nvim-lua/plenary.nvim' } }
     }
 
-    -- colorschemes
+    -- color schemes
     use({
         'rose-pine/neovim',
         as = 'rose-pine',
@@ -55,7 +58,7 @@ return require('packer').startup(function(use)
     use { 'ramojus/mellifluous.nvim', as = "mellifluous" }
     use { "rafamadriz/neon", as = "neon" }
     use { "folke/tokyonight.nvim", as = "tokyonight" }
-    --colorschemes end
+    --color schemes end
 
     use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
     use('nvim-treesitter/playground')
@@ -63,7 +66,7 @@ return require('packer').startup(function(use)
     use('mbbill/undotree')
     use('tpope/vim-fugitive')
 
-    -- completion
+    -- completion and lsp
     use("williamboman/mason.nvim")
     use("williamboman/mason-lspconfig.nvim")
     use("neovim/nvim-lspconfig")
