@@ -33,3 +33,9 @@ vim.api.nvim_set_keymap('n', '<leader>is', [[:lua require'core.inkscape'.open_wi
 vim.api.nvim_set_keymap('i', '<C-s>', '<C-g>u<Esc>[s1z=`]a<C-g>u', { noremap = true, silent = true })
 
 vim.api.nvim_set_keymap('n', '<leader>f', '<cmd>! ~/work/scripts/tmuxsessionizer.zsh<CR>', { noremap = true })
+
+vim.keymap.set('t', '<Esc><Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
+
+-- andere
+vim.keymap.set('n', '<leader><Tab>', '_i<Tab><Esc>$')
+vim.keymap.set('n', '<leader><S-Tab>', '_i<Bs><Esc>$')

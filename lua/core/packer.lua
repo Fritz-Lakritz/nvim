@@ -105,4 +105,8 @@ return require('packer').startup(function(use)
             require('Comment').setup()
         end
     }
+    use {
+        "folke/todo-comments.nvim",
+        requires = { "nvim-lua/plenary.nvim", },
+    }
 end)
