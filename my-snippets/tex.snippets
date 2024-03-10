@@ -20,6 +20,7 @@ snippet '([A-Za-z])_(\d\d)' "auto subscript2" wrA
 `!p snip.rv = match.group(1)`_{`!p snip.rv = match.group(2)`}
 endsnippet
 
+
 snippet ali "align" i
 \\begin{align*}
 	$1
@@ -74,6 +75,7 @@ snip.rv = stripped[0:i] + "\\frac{" + stripped[i+1:-1] + "}"
 `{$1}$0
 endsnippet
 
+context "math()"
 snippet != "equals" iA
 \neq 
 endsnippet
@@ -81,6 +83,41 @@ endsnippet
 context "math()"
 snippet ceil "ceil" iA
 \left\lceil $1 \right\rceil $0
+endsnippet
+
+context "math()"
+snippet * "times" iA
+\cdot 
+endsnippet
+
+context "math()"
+snippet <= "leq" iA
+\leq 
+endsnippet
+
+context "math()"
+snippet >= "geq" iA
+\geq 
+endsnippet
+
+context "math()"
+snippet | "mid" i
+\mid 
+endsnippet
+
+context "math()"
+snippet !| "nmid" iA
+\nmid 
+endsnippet
+
+context "math()"
+snippet => "Rightarrow" iA
+\Rightarrow 
+endsnippet
+
+context "math()"
+snippet =< "Leftarrow" iA
+\Leftarrow 
 endsnippet
 
 context "math()"

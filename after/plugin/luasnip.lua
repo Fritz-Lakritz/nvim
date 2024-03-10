@@ -45,6 +45,9 @@ ls.add_snippets("tex", {
     -- autosnippet
 
 
+    -- text
+    s("OBdA", t("Ohne Beschränkung der Allgemeinheit")),
+    s("oBdA", t("ohne Beschränkung der Allgemeinheit")),
     -- mathmode
     s({ trig = "dm", snippetType = "autosnippet", dscr = "display math" },
         fmt(

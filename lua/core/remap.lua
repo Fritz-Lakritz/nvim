@@ -39,3 +39,5 @@ vim.keymap.set('t', '<Esc><Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' }
 -- andere
 vim.keymap.set('n', '<leader><Tab>', '_i<Tab><Esc>$')
 vim.keymap.set('n', '<leader><S-Tab>', '_i<Bs><Esc>$')
+
+vim.keymap.set('n', '<leader>t', '<cmd>UndotreeToggle<CR>')
