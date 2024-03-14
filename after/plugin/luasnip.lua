@@ -88,6 +88,10 @@ ls.add_snippets("tex", {
 
     -- Kommentare
     ls.parser.parse_snippet("Quelle", "\\begin{flushright}\n\t\\tiny{Quelle: $1}\n\\end{flushright}"),
+    -- listen
+    s("enumerate",
+        fmt("\\begin{enumerate}<>\n\t\\item <>\n\\end{enumerate}", { c(1, { t(""), t("[label=\\alph*)]") }), i(2) },
+            { delimiters = "<>" })),
 
 })
 --------------------------------------------------------

@@ -51,15 +51,17 @@ snippet p "pause" i
 \\pause
 endsnippet
 
+context "math()"
 snippet '((\d+)|(\d*)(\\)?([A-Za-z]+)((\^|_)(\{\d+\}|\d))*)/' "Fraction" wrA
 \\frac{`!p snip.rv = match.group(1)`}{$1}$0
 endsnippet
 
+context "math()"
 snippet / "Fraction" i
 \\frac{${VISUAL}}{$1}$0
 endsnippet
 
-
+context "math()"
 priority 1000
 snippet '^.*\)/' "() Fraction" wrA
 `!p
@@ -83,6 +85,11 @@ endsnippet
 context "math()"
 snippet ceil "ceil" iA
 \left\lceil $1 \right\rceil $0
+endsnippet
+
+context "math()"
+snippet floor "floor" iA
+\left\lfloor $1 \right\rfloor $0
 endsnippet
 
 context "math()"
