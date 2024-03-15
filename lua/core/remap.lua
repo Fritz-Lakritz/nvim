@@ -18,7 +18,7 @@ vim.keymap.set("x", "<leader>p", [["_dP]])
 vim.keymap.set("n", "<leader>dn", "<cmd>lua vim.diagnostic.goto_next()<cr>")
 vim.keymap.set("n", "<leader>dp", "<cmd>lua vim.diagnostic.goto_prev()<cr>")
 vim.keymap.set("n", "<leader>ca", "<cmd>lua vim.lsp.buf.code_action()<cr>")
-vim.keymap.set("n", "<leader>r", "<cmd>lua vim.lsp.buf.rename()<cr>")
+vim.keymap.set("n", "<leader>rn", "<cmd>lua vim.lsp.buf.rename()<cr>")
 
 -- resize
 vim.keymap.set("n", "+", "<cmd>vertical resize +5<cr>")
@@ -32,7 +32,6 @@ vim.api.nvim_set_keymap('n', '<leader>is', [[:lua require'core.inkscape'.open_wi
 -- auto correct
 vim.api.nvim_set_keymap('i', '<C-s>', '<C-g>u<Esc>[s1z=`]a<C-g>u', { noremap = true, silent = true })
 
-vim.api.nvim_set_keymap('n', '<leader>f', '<cmd>! ~/work/scripts/tmuxsessionizer.zsh<CR>', { noremap = true })
 
 vim.keymap.set('t', '<Esc><Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
 
@@ -41,3 +40,7 @@ vim.keymap.set('n', '<leader><Tab>', '_i<Tab><Esc>$')
 vim.keymap.set('n', '<leader><S-Tab>', '_i<Bs><Esc>$')
 
 vim.keymap.set('n', '<leader>t', '<cmd>UndotreeToggle<CR>')
+
+vim.keymap.set("n", "<leader><leader>", function()
+    vim.cmd("so")
+end)
