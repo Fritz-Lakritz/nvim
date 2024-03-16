@@ -14,7 +14,6 @@ return require('packer').startup(function(use)
     use 'vimwiki/vimwiki'
 
     -- Telescope
-    use 'ElPiloto/telescope-vimwiki.nvim'
     use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
 
     use 'christoomey/vim-tmux-navigator'
