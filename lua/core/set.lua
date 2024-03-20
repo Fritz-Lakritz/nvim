@@ -25,6 +25,7 @@ vim.o.shiftwidth = 4    -- Set the number of spaces inserted for each indentatio
 
 vim.opt.clipboard = 'unnamedplus'
 
+vim.opt.undodir = "~/.vim/undodir"
 vim.opt.undofile = true
 
 vim.opt.ignorecase = true
@@ -46,3 +47,5 @@ vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
 vim.opt.inccommand = 'split'
 
 vim.opt.hlsearch = true
+
+vim.opt.laststatus = 3

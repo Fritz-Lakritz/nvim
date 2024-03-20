@@ -8,6 +8,7 @@ vim.cmd [[packadd packer.nvim]]
 return require('packer').startup(function(use)
     -- Packer can manage itself
     -- nvim
+    use 'ggandor/leap.nvim'
     --
     use { 'ArbitRandomUser/latexrenderer' }
     use { 'github/copilot.vim' }
