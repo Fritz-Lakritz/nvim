@@ -49,3 +49,12 @@ vim.opt.inccommand = 'split'
 vim.opt.hlsearch = true
 
 vim.opt.laststatus = 3
+
+-- formater
+vim.g.neoformat_enabled_c = { 'clang_format' }
+
+vim.g.neoformat_clang_format = {
+    exe = 'clang-format',
+    args = { '-style=LLVM' },
+    stdin = 1,
+}

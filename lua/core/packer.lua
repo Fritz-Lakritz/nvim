@@ -121,4 +121,6 @@ return require('packer').startup(function(use)
             }
         end
     }
+    use 'nvim-lualine/lualine.nvim'
+    use 'stevearc/conform.nvim'
 end)
