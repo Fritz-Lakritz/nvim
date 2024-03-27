@@ -1,2 +1,2 @@
-require("core.lazy")
 require("core.remap")
+require("core.lazy_init")
