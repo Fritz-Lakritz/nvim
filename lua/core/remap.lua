@@ -43,3 +43,4 @@ vim.keymap.set('n', '<leader><Tab>', '_i<Tab><Esc>$')
 vim.keymap.set('n', '<leader><S-Tab>', '_i<Bs><Esc>$')
 
 vim.keymap.set('n', '<leader>t', '<cmd>UndotreeToggle<CR>')
+vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww ~/work/scripts/tmuxsession<CR>")
