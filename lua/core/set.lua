@@ -1,6 +1,8 @@
 vim.opt.nu = true
 vim.opt.relativenumber = true
 
+-- test
+-- test
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4
@@ -25,7 +27,7 @@ vim.o.shiftwidth = 4    -- Set the number of spaces inserted for each indentatio
 
 vim.opt.clipboard = 'unnamedplus'
 
-vim.opt.undodir = "~/.vim/undodir"
+vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
 vim.opt.undofile = true
 
 vim.opt.ignorecase = true
