@@ -36,6 +36,7 @@ vim.api.nvim_set_keymap('n', '<leader>is', [[:lua require'core.inkscape'.open_wi
 vim.api.nvim_set_keymap('i', '<C-s>', '<C-g>u<Esc>[s1z=`]a<C-g>u', { noremap = true, silent = true })
 
 
+
 vim.keymap.set('t', '<Esc><Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
 
 -- andere
